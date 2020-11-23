@@ -1,0 +1,71 @@
+function summarization(evt) {
+    txt = $('#summarization-url')[0].value;
+    if (txt == "") {
+        txt = $('#summarization-url')[0].placeholder;
+    }
+    $('#summarization-url')[0].value = txt;
+    options = {size : $('#summary-size')[0].value, domain : $('#summary-domain')[0].value};
+    processdata(txt, "sm", options);
+}
+
+<div class="tab">
+            <button class="tablinks active" onclick="openTab(event, 'Summarization', 'sm')" id="sm">Summarization</button>
+
+<div id="Summarization" class="tabcontent">
+            <div class="input-group textarea-text">
+                <input type="text" id="summarization-url" class="form-control custom-control text-for-analysis" placeholder="https://www.reuters.com/article/us-tesla-musk-sec/teslas-musk-mocks-sec-as-judge-demands-they-justify-fraud-settlement-idUSKCN1ME2CC" aria-label="https://www.reuters.com/article/us-tesla-musk-sec/teslas-musk-mocks-sec-as-judge-demands-they-justify-fraud-settlement-idUSKCN1ME2CC" aria-describedby="basic-addon2">
+                <div>
+                    <select id="summary-size" class="summary-options">
+                        <option value="20">Summary Size: 20%</option>
+                        <option value="10">10%</option>
+                        <option value="30">30%</option>
+                        <option value="40">40%</option>
+                        <option value="50">50%</option>
+                        <option value="60">60%</option>
+                        <option value="70">70%</option>
+                    </select>
+         </div>
+                <span class="input-group-addon btn btn-primary process-button" id="btnlp" onclick="summarization(event)">Summarize</span>
+                
+            </div>
+            <div id="loading-sm">
+                <center><img class="loading_image" src="img/loading-dribble-inner.gif"></center>
+            </div>
+            <div id="sm-results">
+            </div>
+
+
+
+
+
+
+
+
+
+            <div id="services" class="section md-padding">
+						<div class="container">
+							<div class="row">
+								<div class="section-header text-center">
+									<h2 class="title">What We Offer</h2>
+								</div>
+								<div class="row uniform 50%">
+								<!--<div class="col-md-4">-->
+									<div class="features">
+										<img src="img/cloud-braces.svg">
+										<h3>Summarizer</h3>
+										<p>An easy-to-use summarizer to get meaningful summaries.</p>
+									
+								</div>
+								<!--<div class="col-md-4">-->
+									<div class="features">
+										<img src="img/settings.svg">
+										<h3>Integration</h3>
+										<p>We offer integration help, expert assistance and technical support for all of our customers.</p>
+									</div>
+								
+							</div>	
+							</div>
+						</div>
+					</div>
+					
+				
